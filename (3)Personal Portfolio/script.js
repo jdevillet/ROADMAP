@@ -1,4 +1,3 @@
-// Retrieve and apply the saved theme on page load
 document.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme");
   const sunIcon = document.getElementById("sun_icon");
