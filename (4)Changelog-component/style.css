@@ -1,0 +1,205 @@
+:root {
+  --background-clr: hsl(0, 0%, 98%);
+  --main-clr: hsl(229, 80%, 18%);
+  --secondary-clr: hsl(47.6, 89.95%, 60.98%);
+  --accent-clr: hsl(326, 85%, 56%);
+  --hover-clr: hsl(0, 74%, 49%);
+  --active-clr: hsl(0, 74%, 40%);
+  --secondary-ft-clr: hsl(52, 88%, 61%);
+  --ft-clr: hsl(0, 0%, 2%);
+  --secondary-ft-clr: hsl(0, 0%, 97%);
+  --box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.15);
+}
+[data-theme="dark"] {
+  --background-clr: hsl(0, 0%, 10%);
+  --main-clr: hsl(47.6, 89.95%, 60.98%);
+  --secondary-clr: hsl(229, 80%, 18%);
+  --secondary-ft-clr: hsl(229, 80%, 18%);
+  --ft-clr: hsl(52, 88%, 61%);
+  --box-shadow: 0 0 1rem hsla(0, 0%, 23%, 0.349);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background: var(--background-clr);
+  line-height: 1.5;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: calc(15px + 0.390625vw);
+  -webkit-font-smoothing: antialiased;
+  color: var(--ft-clr);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#moon_icon {
+  color: var(--ft-clr);
+}
+
+/* changelog */
+
+.changelog-container {
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  max-width: 40rem;
+  text-align: center;
+  width: 100%;
+  background-color: var(--secondary-clr);
+}
+
+.changelog-container h1 {
+  font-weight: 500;
+  text-align: center;
+  margin-top: 2rem;
+}
+.changelog-container p {
+  text-align: center;
+  color: var(--ft-clr);
+  margin-top: 0.4rem;
+  padding: 0 1rem;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 2rem;
+  padding: 0 1.5rem;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 0.3rem;
+  background: linear-gradient(
+    to bottom,
+    var(--accent-clr) 0%,
+    var(--accent-clr) 95%,
+    rgba(240, 46, 170, 0) 100%
+  );
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -0.2rem;
+}
+
+.timeline-item {
+  padding-right: 3rem;
+  position: relative;
+  text-align: right;
+  width: calc(50% - 0.2rem);
+  max-width: 17rem;
+  padding: 0.5rem 3rem 0.5rem 0.5rem;
+  background: var(--main-clr);
+  border-radius: 0.6rem;
+  box-shadow: 0 0 4px 2px var(--accent-clr);
+  z-index: 2;
+}
+
+.timeline-item:nth-child(even) {
+  left: calc(54% - 0.1rem);
+  text-align: left;
+  padding-left: 3rem;
+}
+
+.timeline-item:before {
+  content: "";
+  position: absolute;
+  width: 1.59rem;
+  height: 0.3rem;
+  right: -1.58rem;
+  background-color: var(--accent-clr);
+  top: calc(50% - 0.2rem);
+  z-index: 1;
+}
+
+.timeline-item:nth-child(even):before {
+  left: -1.58rem;
+  right: auto;
+}
+
+.timeline-date {
+  color: var(--secondary-ft-clr);
+  font-weight: bold;
+}
+
+.timeline-resume {
+  color: var(--secondary-clr);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--main-clr);
+  color: var(--secondary-clr);
+  padding: 0.62rem 1.2rem;
+  border-radius: 0.5rem;
+  margin: 2.5rem 0;
+  transition: transform 200ms ease, box-shadow 200ms ease,
+    background-color 200ms ease;
+  font-weight: bold;
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px,
+    rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px,
+    rgba(240, 46, 170, 0.05) 0px 25px;
+}
+
+.btn:hover {
+  background-color: var(--secondary-clr);
+  color: var(--ft-clr);
+  border: 0.1rem solid var(--main-clr);
+  transform: scale(1.05);
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 3px, rgba(240, 46, 170, 0.3) 0px 11px,
+    rgba(240, 46, 170, 0.2) 0px 19px, rgba(240, 46, 170, 0.1) 0px 27px,
+    rgba(240, 46, 170, 0.05) 0px 34px;
+}
+
+.btn:active {
+  background-color: var(--main-clr);
+}
+
+@media (max-width: 720px) {
+  .changelog-container {
+    max-width: 20rem;
+  }
+  .timeline:before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    margin: 1rem 0;
+  }
+
+  .timeline-item:nth-child(even) {
+    left: 0;
+    padding-left: 20px;
+  }
+
+  .timeline-item:before {
+    left: -17px;
+    width: 1.07rem;
+  }
+
+  .timeline-item:nth-child(even):before {
+    left: -17px;
+  }
+}
+@media (max-width: 340px) {
+  .btn {
+    max-width: 10rem;
+  }
+}

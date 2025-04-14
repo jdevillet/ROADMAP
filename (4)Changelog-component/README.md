@@ -1,24 +1,12 @@
 # Personal Portfolio
 
-![Personal Portfolio](/assets/img/screenshot.png)
+![Personal Portfolio](Capture%20-%20Changlog.png)
 
 ## Goal
 
 Add styles to previous project. Focus on layout and responsive design.
 
-https://roadmap.sh/projects/portfolio-website
+https://roadmap.sh/projects/changelog-component
 
-## Requirements
-
-Requirements
-Fully styled and responsive website
-Consistent color scheme and typography
-Use flexbox, media queries, and grid to create a responsive layout
-Responsive navigation bar
-Well-styled contact form
-
-Bonus:
-
-Utilize Google Fonts
-Link to GitHub pages
-Add dark mode support
+Description
+A changelog component that can be used to display the changes made in a project. The component is built using HTML, CSS, and JavaScript. The component is responsive and was built with reuability in mine.
