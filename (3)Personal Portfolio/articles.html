@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Articles | CV WEBSITE</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="My articles" />
+  <meta name="keywords" content="Articles frontend development" />
+  <meta name="author" content="Me" />
+  <!-- og Meta Tags -->
+  <meta property="og:title" content="Me, Developer" />
+  <meta property="og:description" content="My Articles" />
+  <meta property="og:image" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <!-- Favicon -->
+  <link rel="icon" href="" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./assets/img/pixelpp.png" class="logo" alt="Photo of me">
+      </div>
+      <ul>
+        <li class="nav-link"><a href="./index.html">Home</a></li>
+        <li class="nav-link"><a href="./projects.html">Projects</a></li>
+        <li class="nav-link active"><a href="./articles.html">Articles</a></li>
+        <li class="nav-link"><a href="./contact.html">Contact</a></li>
+        <li> <button class="toggle-theme" onclick="toggleTheme()">
+            <i class="fa-solid fa-sun" id="sun_icon"></i>
+            <i class="fa-solid fa-moon" id='moon_icon' style="display: none;"></i>
+          </button></li>
+      </ul>
+      <a class="social" href="https://github.com/jdevillet"><i class="fa-brands fa-github"></i></a>
+    </nav>
+  </header>
+
+  <div class="articles page-wrapper">
+    <div class="title-container low-space">
+      <div class="title">
+        <h1>Articles</h1>
+      </div>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card__header">
+          <div class="image image1"></div>
+        </div>
+
+        <div class="card-content">
+
+          <span class="tag tag-food">Food</span>
+          <div class="card__body">
+            <h3>Mexican food review</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus repudiandae inventore eum debitis
+              natus vel impedit, culpa molestias voluptatum enim!</p>
+          </div>
+
+          <div class="card__footer">
+            <div class="author">
+              <img src="./assets/img/pixelpp.png" alt="">
+              <div class="author__info">
+                <h3>Almonti Doe</h3>
+                <p class="light small">
+                  Less than 1h ago
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__header">
+          <div class="image image2"></div>
+        </div>
+        <div class="card-content">
+
+          <span class="tag tag-tech">Tech</span>
+          <div class="card__body">
+            <h3>This new crypto is skyrocketing</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi repudiandae id culpa! Repellat eaque
+              dolorum
+              reprehenderit assumenda.</p>
+          </div>
+
+          <div class="card__footer">
+            <div class="author">
+              <img src="./assets/img/pixelpp.png" alt="">
+              <div class="author__info">
+                <h3>Almonti Doe</h3>
+                <p class="light small">
+                  Less than 1h ago
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__header">
+          <div class="image image3"></div>
+        </div>
+        <div class="card-content">
+
+          <span class="tag tag-sport">Sport</span>
+          <div class="card__body">
+            <h3>How not to fail your next marathon</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laborum tempora eligendi iste
+              animi.
+              Excepturi!</p>
+          </div>
+
+          <div class="card__footer">
+            <div class="author">
+              <img src="./assets/img/pixelpp.png" alt="">
+              <div class="author__info">
+                <h3>Almonti Doe</h3>
+                <p class="light small">
+                  Less than 1h ago
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; all rights reserved 2025</p>
+  </footer>
+
+</body>
+<script src="script.js"></script>
+
+</html>

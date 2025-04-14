@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | CV WEBSITE</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Contact me" />
+  <meta name="keywords" content="Contact" />
+  <meta name="author" content="Me" />
+  <!-- og Meta Tags -->
+  <meta property="og:title" content="Contact" />
+  <meta property="og:description" content="How to contact my person" />
+  <meta property="og:image" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <!-- Favicon -->
+  <link rel="icon" href="" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./assets/img/pixelpp.png" class="logo" alt="Photo of me">
+      </div>
+      <ul>
+        <li class="nav-link"><a href="./index.html">Home</a></li>
+        <li class="nav-link"><a href="./projects.html">Projects</a></li>
+        <li class="nav-link"><a href="./articles.html">Articles</a></li>
+        <li class="nav-link active"><a href="./contact.html">Contact</a></li>
+        <li> <button class="toggle-theme" onclick="toggleTheme()">
+            <i class="fa-solid fa-sun" id="sun_icon"></i>
+            <i class="fa-solid fa-moon" id='moon_icon' style="display: none;"></i>
+          </button></li>
+      </ul>
+      <a class="social" href="https://github.com/jdevillet"><i class="fa-brands fa-github"></i></a>
+    </nav>
+  </header>
+
+  <div class="Contact page-wrapper">
+
+
+    <div class="title-container low-space">
+      <div class="title">
+        <h1>Contact Me</h1>
+      </div>
+    </div>
+
+    <div class="form-wrapper">
+
+      <form action="submit" method="POST">
+        <div class="name form-wrapper">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Jean" required>
+        </div>
+
+        <div class="email form-wrapper">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="jean@mail.com" required>
+        </div>
+
+        <div class="message form-wrapper">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="I just wanted to say..." required></textarea>
+        </div>
+
+        <input type="submit" class="link-btn" value="Send Message">
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; all rights reserved 2025</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
