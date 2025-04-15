@@ -1,8 +1,10 @@
-# Changelog Component
+# Testimonials
 
-![Changelog Component](Capture%20-%20Changlog.png)
+![Testimonials](Capture%20-%20Changlog.png)
 
 ## Goal
+
+Add styles to previous project. Focus on layout and responsive design.
 
 https://roadmap.sh/projects/changelog-component
 
