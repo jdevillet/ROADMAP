@@ -1,12 +1,13 @@
 # Testimonials
 
-![Testimonials](Capture%20-%20Changlog.png)
+![Testimonials](./assets/img/Testimonials%20Screenshot.png)
 
 ## Goal
 
-Add styles to previous project. Focus on layout and responsive design.
+Positioning and layout in CSS.
 
-https://roadmap.sh/projects/changelog-component
+https://roadmap.sh/projects/testimonial-cards
 
-Description
-A changelog component that can be used to display the changes made in a project. The component is built using HTML, CSS, and JavaScript. The component is responsive and was built with reuability in mine.
+# Description
+
+In this project, you are required to create a bunch of testimonial cards. Testimonials are quotes or statements from satisfied customers or users, often used on websites to build credibility and trust.
