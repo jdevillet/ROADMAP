@@ -11,3 +11,56 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.datepicker-container {
+  max-width: 12rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.date-header {
+  display: flex;
+  border: 1px solid black;
+  margin-bottom: 0.4rem;
+}
+
+.date-header input {
+  border: none;
+  /* max-width: 10rem; */
+}
+
+.calendar-container {
+  width: 100%;
+}
+
+.header {
+  border: 1px solid black;
+  padding: 0.3rem;
+}
+
+.header div:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1.7rem);
+  border: 1px solid rgb(0, 0, 0);
+}
+.calendar span {
+  border: 1px solid rgb(161, 161, 161);
+}
