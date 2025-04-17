@@ -1,6 +1,6 @@
 # Datepicker UI
 
-![Testimonials](./assets/img/Testimonials%20Screenshot.png)
+![Datepicker UI](Screenshot%202025-04-17%20141059.png)
 
 ## Goal
 
