@@ -1,12 +1,12 @@
-# Datepicker UI
+# Accessible Form UI
 
-![Testimonials](./assets/img/Testimonials%20Screenshot.png)
+![Form UI](./screenshot%20Access.png)
 
 ## Goal
 
-practice your HTML and CSS but also to focus on creating an accessible form that is easy to use for all users, including those with disabilities.
+Practice your HTML and CSS but also to focus on creating an accessible form that is easy to use for all users, including those with disabilities.
 
-https://roadmap.sh/projects/datepicker-ui
+https://roadmap.sh/projects/accessible-form-ui
 
 # Description
 

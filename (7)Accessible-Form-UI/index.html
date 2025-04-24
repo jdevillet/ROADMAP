@@ -23,30 +23,39 @@
         <input type="email" id="email" placeholder="John@Doe.com" required aria-required="true"
           aria-describedby="email-error">
         <p id="email-error" aria-live="assertive" style="color: red; display: none;">Invalid email format.</p>
+        <p id="email-taken" aria-live="assertive" style="color: red; display: none;">Email already taken.</p>
 
-        <label for="password">Password</label>
+
+        <label for="password">Enter Password</label>
         <div class="password-field">
           <input type="password" id="password" required aria-required="true">
-
-          <span class="toggle-icon"><i class="fa-solid fa-eye"></i></span>
+          <button class="toggle-icon" type="button" aria-pressed="false" aria-label="Password is hidden">
+            <i class="fa-solid fa-eye"></i>
+          </button>
         </div>
 
-
         <label for="password-confirm">Confirm Password</label>
-        <input type="password" id="password-confirm" required aria-required="true">
-
-        <span class="toggle-icon"><i class="fa-solid fa-eye"></i></span>
+        <div class="password-field">
+          <input type="password" id="password-confirm" required aria-required="true">
+          <button class="toggle-icon" type="button" aria-pressed="false" aria-label="Password confirmation is hidden">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+        </div>
 
         <input type="submit" value="Update Profile">
       </form>
     </div>
 
     <div class="profile-progress">
-      <div class="completion-progress-bar">65%</div>
+      <div class="progress-bar-wrapper">
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+        <span class="completion-progress">65%</span>
+      </div>
 
       <div class="completion-summary">
         <p>Profile Completeness</p>
-
         <div class="profile-setup-checklist">
           <ul>
             <li class="checked">Create Account</li>
@@ -60,25 +69,6 @@
     </div>
 
   </div>
-
-</body>
-
-</html>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css">
-  <title>Accessible Form UI</title>
-</head>
-
-<body>
-
 
 </body>
 
