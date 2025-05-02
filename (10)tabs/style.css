@@ -69,7 +69,7 @@ body {
   background-color: #e0f7fa;
 }
 
-.content {
+.tabs-content {
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -78,10 +78,22 @@ body {
   flex-grow: 1;
 }
 
-.content-item {
-  height: 100%;
+.tab-panel {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(10px);
   padding: 10px;
-  border-radius: 5px;
-  background-color: #ffffff;
   text-align: center;
+}
+
+.tab-panel.active-panel {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  position: static;
 }

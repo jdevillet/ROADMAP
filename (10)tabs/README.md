@@ -1,6 +1,6 @@
 # Tabs
 
-![Tabs](./Tooltip%20screenshot.png)
+![Tabs](project-screenshot.png)
 
 ## Goal
 
