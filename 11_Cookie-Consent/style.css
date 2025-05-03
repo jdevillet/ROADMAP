@@ -14,7 +14,6 @@ body {
   padding: 20px;
   height: 200vh;
 }
-
 .cookie-container {
   position: fixed;
   bottom: 20px;
@@ -22,14 +21,18 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
-  background: hsl(210, 29%, 25%); /* Converted from #2c3e50 */
-  color: hsl(0, 0%, 100%); /* White */
+  background: hsl(210, 29%, 25%);
+  color: hsl(0, 0%, 100%);
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0px 4px 10px hsla(0, 0%, 0%, 0.2);
   max-width: 300px;
   z-index: 1000;
   font-size: 1.1rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(400px);
+  transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
 }
 
 .cookie-icon img {
@@ -38,7 +41,7 @@ body {
 }
 
 .cookie-text a {
-  color: hsl(38, 85%, 54%); /* Converted from #f39c12 */
+  color: hsl(38, 85%, 54%);
   text-decoration: none;
 }
 
@@ -46,22 +49,22 @@ body {
   text-decoration: underline;
 }
 
-.cookie-button {
-  background: hsl(38, 85%, 54%); /* Converted from #f39c12 */
+.cookie-accept {
+  background: hsl(38, 85%, 54%);
   color: hsl(0, 0%, 100%);
   border: none;
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 1.1rem;
   transition: background 0.3s ease-in-out;
 }
 
-.cookie-button:hover {
-  background: hsl(23, 78%, 53%); /* Converted from #e67e22 */
+.cookie-accept:hover {
+  background: hsl(23, 78%, 53%);
 }
 
-.close-button {
+.cookie-close {
   background: transparent;
   border: none;
   font-size: 16px;
@@ -69,6 +72,16 @@ body {
   color: hsl(0, 0%, 100%);
 }
 
-.close-button:hover {
-  color: hsl(4, 78%, 58%); /* Converted from #e74c3c */
+.cookie-close:hover {
+  color: hsl(4, 78%, 58%);
+}
+
+.cookie-close::before {
+  content: "✖";
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 92%);
+}
+
+.cookie-close:hover::before {
+  color: hsl(0, 100%, 50%);
 }
