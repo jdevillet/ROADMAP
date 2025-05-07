@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: hsl(210, 29%, 25%);
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.textarea-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: hsl(210, 29%, 25%);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px hsla(0, 0%, 0%, 0.2);
+  width: 400px;
+}
+
+.textarea-wrapper textarea {
+  width: 100%;
+  height: 200px;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid hsl(210, 15%, 40%);
+  background: hsl(210, 29%, 30%);
+  color: hsl(0, 0%, 100%);
+  resize: none;
+  font-size: 1.1rem;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.textarea-wrapper textarea:focus {
+  border-color: hsl(38, 85%, 54%);
+  outline: none;
+}
+
+.textarea-wrapper textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.textarea-wrapper textarea::-webkit-scrollbar-track {
+  background: hsl(210, 29%, 20%);
+  border-radius: 8px;
+}
+
+.textarea-wrapper textarea::-webkit-scrollbar-thumb {
+  background: hsl(38, 85%, 54%);
+  border-radius: 8px;
+}
+
+.textarea-wrapper textarea::-webkit-scrollbar-thumb:hover {
+  background: hsl(23, 78%, 53%);
+}
+
+.char-counter {
+  position: relative;
+  align-self: flex-end;
+  margin-top: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: hsl(0, 0%, 100%);
+}
+
+.full-character {
+  box-shadow: 0px 4px 10px hsla(0, 100%, 36%, 0.8);
+  border-radius: 8px;
+}
