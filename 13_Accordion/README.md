@@ -1,13 +1,13 @@
-# Restricted Textarea
+# Accordion
 
-![Restricted Textarea](project-screenshot.png)
+![Accordion](project-screenshot.png)
 
 ## Goal
 
-Practice manipulating input elements with JavaScript, handling user input events, and providing real-time feedback to enhance user experience.
+Practice DOM manipulation, event handling, and implementing responsive design patterns using JavaScript.
 
-https://roadmap.sh/projects/restricted-textarea
+https://roadmap.sh/projects/accordion
 
 # Description
 
-Create a textarea that tracks and displays the number of characters typed by the user, along with a maximum character limit. As the user types, the character count will update dynamically. Once the limit is reached, the textarea will prevent further input and the border will turn red to visually indicate the limit has been hit.
+Create an accordion component that displays a list of questions or headings. When a user clicks on a question, its corresponding answer or content section will expand while collapsing any previously opened section. This allows only one section to be open at a time, keeping the UI clean and organized.
