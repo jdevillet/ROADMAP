@@ -6,12 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Age Calculator</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/js-datepicker@5.18.4/dist/datepicker.min.css">
 </head>
 
 <body>
+  <div class="container">
+    <h1>Age Calculator</h1>
 
+    <form id="age-form">
+      <label for="datepicker">Enter your birthdate:</label>
+      <input type="text" id="datepicker">
+      <button type="submit" id="calculateButton">Calculate Age</button>
+    </form>
 
-  <script src="index.js"></script>
+    <div id="result" class="hidden"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-datepicker@5.18.4/dist/datepicker.min.js"></script>
+    <script type="module">
+      import { DateTime } from "https://cdn.jsdelivr.net/npm/luxon@3.5.0/build/es6/luxon.js";
+    </script>
+    <script type="module" src="index.js"></script>
 </body>
 
 </html>
