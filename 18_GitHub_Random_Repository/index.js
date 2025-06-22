@@ -1,71 +1,89 @@
-const temperatureInput = document.getElementById("temperatureInput");
-const fromUnitSelect = document.getElementById("fromUnitSelect");
-const toUnitSelect = document.getElementById("toUnitSelect");
-const resultDisplay = document.getElementById("resultDisplay");
+const langSelect = document.getElementById("lang-select");
+const repoDisplay = document.querySelector(".repo-display");
+const refreshBtn = document.getElementById("refresh-btn");
 
-const FieldsChecker = () => {
-  if (temperatureInput.value && fromUnitSelect.value && toUnitSelect.value) {
-    resultDisplay.textContent = "";
-    resultDisplay.classList.remove("error", "active");
-    console.log("err1");
+let languages = [];
+let isLoading = false;
 
-    tempConverter();
-  } else {
-    resultDisplay.textContent =
-      "Please enter a temperature and select both units to proceed";
-    resultDisplay.classList.add("error", "active");
-    console.log("err2");
+async function languagesFetch() {
+  try {
+    const res = await fetch("languages.json");
+    const data = await res.json();
+    languages = data;
+    languages.shift();
+    langSelect.innerHTML = "";
+
+    langSelect.innerHTML = '<option value="">Select a language</option>';
+
+    languages.forEach((language) => {
+      const option = document.createElement("option");
+      option.value = language.value;
+      option.textContent = language.title;
+      langSelect.appendChild(option);
+    });
+  } catch (error) {
+    console.error("Error fetching languages:", error);
+    repoDisplay.classList.add("bg-danger");
   }
-};
-//prettier-ignore
-const tempConverter = () => {
-  const fromValue = fromUnitSelect.value;
-  const toValue = toUnitSelect.value;
-  const temperature = Number(parseFloat(temperatureInput.value).toFixed(2));
+}
 
-  let convertedTemperature;
+async function getRandomRepo() {
+  isLoading = true;
+  repoDisplay.innerHTML = `
+  <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+    <span></span>
+  </div>
+`;
+  repoDisplay.classList.remove("bg-primary");
+  refreshBtn.disabled = true;
 
-  if (fromValue === toValue) {
-    resultDisplay.textContent = `${temperature} ${fromValue} = ${temperature} ${fromValue}`
-    resultDisplay.classList.add("active")
-    console.log("err3");
-  } else {
-    switch (fromValue) {
-      case "celsius":
-        if (toValue === "fahrenheit") {
-          convertedTemperature = (temperature * 9) / 5 + 32;
-        } else if (toValue === "kelvin") {
-          convertedTemperature = temperature + 273.15;
-        }
-        break;
-
-      case "fahrenheit":
-        if (toValue === "celsius") {
-          convertedTemperature = (temperature - 32) * 5 / 9;
-        } else if (toValue === "kelvin") {
-          convertedTemperature = (temperature - 32) * 5 / 9 + 273.15;
-        }
-        break;
-
-      case "kelvin":
-        if (toValue === "celsius") {
-          convertedTemperature = temperature - 273.15;
-        } else if (toValue === "fahrenheit") {
-          convertedTemperature = (temperature - 273.15) * 9 / 5  + 32;
-        }
-        break;
-
-      default:
-        resultDisplay.textContent = "Error: Invalid unit selection.";
-        resultDisplay.classList.add("error", "active");
-            console.log("err4");
-        return;
+  const url = `https://api.github.com/search/repositories?q=language:${langSelect.value}&sort=stars&order=desc&per_page=100`;
+  try {
+    const res = await fetch(url, {
+      headers: {
+        accept: "application/vnd.github+json",
+      },
+    });
+    const data = await res.json();
+    if (!data.items || data.items.length === 0) {
+      repoDisplay.innerHTML = `<p>No repository have been found for ${langSelect.value}</p>`;
+      repoDisplay.classList.add("bg-danger");
+      return;
     }
-  }
 
-  if(convertedTemperature !== undefined){
-    resultDisplay.textContent = `${temperature} ${fromValue} = ${convertedTemperature.toFixed(2)} ${toValue}`
-    resultDisplay.classList.add("active")
-        console.log("err5");
+    const randomIndex = Math.floor(Math.random() * data.items.length);
+    const repo = data.items[randomIndex];
+
+    repoDisplay.innerHTML = `
+      <p class="repo-name text-light fw-bold fs-2">${repo.name}</p>
+      <p class="about text-light fst-italic fs-4">${repo.description}</p>
+      <div class="repo-info">
+        <p class="lang text-light"><i class="fa-solid fa-code"></i> ${repo.language}</p>
+        <p class="stars text-light"><i class="fa-solid fa-star" style="color: #FFD43B;"></i> ${repo.stargazers_count}</p>
+        <p class="forks text-light"><i class="fa-solid fa-code-fork" style="color: #63E6BE;"></i> ${repo.forks}</p>
+        <p class="issues text-light"><i class="fa-solid fa-triangle-exclamation" style="color: #fb0410;"></i> ${repo.open_issues}</p>
+      </div>
+    `;
+    repoDisplay.classList.add("bg-primary");
+    repoDisplay.classList.remove("bg-danger");
+    refreshBtn.classList.remove("d-none");
+  } catch (error) {
+    console.log("Error fetching repository", error);
+    repoDisplay.innerHTML =
+      "<p>An error occured while fetching the repository</p>";
+    repoDisplay.classList.add("bg-danger");
+  } finally {
+    isLoading = false;
+    refreshBtn.disabled = false;
   }
-};
+}
+
+refreshBtn.addEventListener("click", () => {
+  getRandomRepo();
+});
+
+languagesFetch();
+
+langSelect.addEventListener("input", () => {
+  getRandomRepo();
+});
