@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <nav>
+      <h1>Weather Web App</h1>
+      <div class="search-area-wrapper">
+        <form id="locationForm" class="location-search-form">
+          <div class="location-input-with-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <input type="text" id="locationInput" placeholder="Enter location...">
+          </div>
+          <button type="submit" id="search-btn" class="refresh-button button">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="main-card" id="mainCard">
+      <div class="day">
+        <p class="city" id="city"></p>
+        <p class="date" id="date"></p>
+      </div>
+
+      <div class="weather-infos">
+
+        <div class="temperature" id="main-temp">
+
+        </div>
+
+        <div class="weather-condition" id="main-weather-condition">
+
+        </div>
+
+        <div class="weather-details">
+          <div class="wind-speed detail">
+            <span>Wind</span>
+            <span id="main-wind-speed"></span>
+          </div>
+
+          <div class="rain-probability detail">
+            <span>Rain Probability</span>
+            <span id="main-rain-probability"></span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="hourly-forecast">
+      <h3>24-Hour Outlook</h3>
+      <div class="hourly-cards-container" id="hourlyCardsContainer">
+      </div>
+
+    </div>
+
+    <button id="refresh-btn" class="button">Refresh</button>
+
+  </div>
+
+  <script type="module" src="index.js"></script>
+</body>
+
+</html>
