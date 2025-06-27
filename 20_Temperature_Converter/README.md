@@ -6,7 +6,7 @@
 
 The goal of this project is to help you handling user input, conditionally enabling form elements, and performing simple calculations using JavaScript.
 
-https://roadmap.sh/projects/custom-dropdown
+https://roadmap.sh/projects/temperature-converter
 
 # Description
 
