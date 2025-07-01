@@ -11,3 +11,4 @@ This repository showcases front-end projects created in alignment with the devel
 [Custom Dropdown](https://roadmap.sh/projects/custom-dropdown), [Task Tracker](https://roadmap.sh/projects/task-tracker-js),\
 [Github Random Repo](https://roadmap.sh/projects/github-random-repo), [Reddit Client](https://roadmap.sh/projects/reddit-client),\
 [Temperature Converter](https://roadmap.sh/projects/temperature-converter), [Age Calculator](https://roadmap.sh/projects/age-calculator),
+[Temperature Converter](https://roadmap.sh/projects/temperature-converter), [Weather Web App](https://roadmap.sh/projects/weather-app),
