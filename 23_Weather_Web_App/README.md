@@ -2,7 +2,9 @@
 
 ![Weather Web App](project-screenshot.png)
 
-[[Weather App Project Page link here](https://roadmap.sh/projects/weather-app)]
+## Project Page
+
+https://roadmap.sh/projects/weather-app
 
 # Description
 
