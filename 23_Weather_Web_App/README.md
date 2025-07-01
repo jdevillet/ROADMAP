@@ -2,7 +2,7 @@
 
 ![Weather Web App](project-screenshot.png)
 
-https://roadmap.sh/projects/custom-dropdown
+https://roadmap.sh/projects/weather-app
 
 # Description
 
